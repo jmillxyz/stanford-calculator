@@ -97,12 +97,9 @@
 		9FDC92911D0F8A4600F61ABD /* stanford-calculator */ = {
 			isa = PBXGroup;
 			children = (
-				9FDC92921D0F8A4600F61ABD /* AppDelegate.swift */,
 				9FDC92941D0F8A4600F61ABD /* ViewController.swift */,
 				9FDC92961D0F8A4600F61ABD /* Main.storyboard */,
-				9FDC92991D0F8A4700F61ABD /* Assets.xcassets */,
-				9FDC929B1D0F8A4700F61ABD /* LaunchScreen.storyboard */,
-				9FDC929E1D0F8A4700F61ABD /* Info.plist */,
+				9FDC92C01D0F8A5800F61ABD /* Supporting Files */,
 			);
 			path = "stanford-calculator";
 			sourceTree = "<group>";
@@ -123,6 +120,17 @@
 				9FDC92B41D0F8A4700F61ABD /* Info.plist */,
 			);
 			path = "stanford-calculatorUITests";
+			sourceTree = "<group>";
+		};
+		9FDC92C01D0F8A5800F61ABD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FDC92921D0F8A4600F61ABD /* AppDelegate.swift */,
+				9FDC92991D0F8A4700F61ABD /* Assets.xcassets */,
+				9FDC929B1D0F8A4700F61ABD /* LaunchScreen.storyboard */,
+				9FDC929E1D0F8A4700F61ABD /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +201,7 @@
 				TargetAttributes = {
 					9FDC928E1D0F8A4600F61ABD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LE99934MXM;
 					};
 					9FDC92A21D0F8A4700F61ABD = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -401,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "stanford-calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gallutron.stanford-calculator";
@@ -412,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "stanford-calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gallutron.stanford-calculator";
