@@ -17,10 +17,17 @@ class ViewController: UIViewController {
     @IBAction private func touchDigit(sender: UIButton) {
         let digit = sender.currentTitle!
         if userIsTyping {
+            if digit == "." && display.text!.containsString(".") {
+                return
+            }
             let currentDisplayText = display.text!
             display.text = currentDisplayText + digit
         } else {
-            display.text = digit
+            if digit == "." {
+                display.text = "0."
+            } else {
+                display.text = digit
+            }
         }
         userIsTyping = true
     }
@@ -33,6 +40,7 @@ class ViewController: UIViewController {
             display.text = String(newValue)
         }
     }
+    
     private var brain = CalculatorBrain()
     
     @IBAction private func performOperation(sender: UIButton) {

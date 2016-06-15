@@ -58,7 +58,7 @@ class CalculatorBrain {
             pending = nil
         }
     }
-    
+
     private var pending: PendingBinaryOperationInfo?
     
     private struct PendingBinaryOperationInfo {
