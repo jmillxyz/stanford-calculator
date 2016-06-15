@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var log: UITextView!
+    
     private var brain = CalculatorBrain()
     
     @IBAction private func performOperation(sender: UIButton) {
@@ -49,8 +51,12 @@ class ViewController: UIViewController {
             userIsTyping = false
         }
         if let mathSymbol = sender.currentTitle {
+            log.text? = log.text! + String(displayValue) + " " + sender.currentTitle! + " "
             brain.performOperation(mathSymbol)
         }
         displayValue = brain.result
+        if sender.currentTitle == "=" {
+            log.text? = log.text! + String(displayValue) + "\n"
+        }
     }
 }
