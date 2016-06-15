@@ -23,14 +23,17 @@ class CalculatorBrain {
         "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
         "sin" : Operation.UnaryOperation(sin),
+        "tan" : Operation.UnaryOperation(tan),
         "×" : Operation.BinaryOperation({ $0 * $1 }),
         "÷" : Operation.BinaryOperation({ $0 / $1 }),
         "+" : Operation.BinaryOperation({ $0 + $1 }),
         "−" : Operation.BinaryOperation({ $0 - $1 }),
-        "=" : Operation.Equals
+        "=" : Operation.Equals,
+        "C" : Operation.NullOperation
     ]
     
     private enum Operation {
+        case NullOperation
         case Constant(Double)
         case UnaryOperation((Double) -> Double)
         case BinaryOperation((Double, Double) -> Double)
@@ -40,6 +43,8 @@ class CalculatorBrain {
     func performOperation(symbol: String) {
         if let operation = operations[symbol] {
             switch operation {
+            case .NullOperation:
+                accumulator = 0.0
             case .Constant(let value):
                 accumulator = value
             case .UnaryOperation(let function):

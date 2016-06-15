@@ -55,7 +55,9 @@ class ViewController: UIViewController {
             brain.performOperation(mathSymbol)
         }
         displayValue = brain.result
-        if sender.currentTitle == "=" {
+        if sender.currentTitle == "C" {
+            log.text? = ""
+        } else if sender.currentTitle == "=" {
             log.text? = log.text! + String(displayValue) + "\n"
         }
     }
